@@ -142,18 +142,6 @@ public class LinkedListDeque <ItemType> {
             return null;
         }
         return getRecursiveHelp(index, this.sentinel.next);
-      /*
-        int localSize = size-1;
-        ItemNode p = sentinel.next;
-
-        if (index == 0) {
-            return p.item;
-        } else {
-            p = sentinel.next.next;
-            System.out.print("running recursive: " + p.item);
-            return getRecursiveHelp((index - 1), p.next);
-        }
-        */
     }
 
     public ItemType getRecursiveHelp(int index, ItemNode whatever) {
@@ -164,9 +152,8 @@ public class LinkedListDeque <ItemType> {
     }
 
     public static void main(String[] args) {
- 		/* Creates a list of one integer, namely 10 */
+        // informal tests
         LinkedListDeque L = new LinkedListDeque();
-      //  L.addFirst(1);
         System.out.println(L.isEmpty());
         L.addLast(2);
         L.addLast(3);

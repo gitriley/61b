@@ -7,7 +7,7 @@ public class ArrayListDeque<Item>{
     int nextFirst;
     int nextLast;
 
-    /** cretes an empty array-list */
+    /** creates an empty array-list */
     public ArrayListDeque() {
         items = (Item[]) new Object[8];
         size = 0;
@@ -50,7 +50,6 @@ public class ArrayListDeque<Item>{
     /** helper function. resizes the array to the target capacity  */
     public void resize(int capacity) {
         Item[] a = (Item[]) new Object[capacity];
-      //  int start = mod(nextFirst + 1);
 
         /* find the index of the array's first item */
         int start = mod(nextFirst + 1);
@@ -176,6 +175,8 @@ public class ArrayListDeque<Item>{
     }
 
     public static void main(String[] args) {
+
+        // informal tests
         ArrayListDeque A = new ArrayListDeque();
         A.addFirst(5);
         A.addFirst(99);
@@ -371,32 +372,7 @@ public class ArrayListDeque<Item>{
         System.out.print(B.get(3));
         System.out.print(B.getLast());
         B.printDeque();
-
-
-
-
-
     }
  }
 
 
- /*
-
-# public void addFirst(Item): Adds an item to the front of the Deque.
-
-# public void addLast(Item): Adds an item to the back of the Deque.
-
-# public boolean isEmpty(): Returns true if deque is empty, false otherwise.
-
-# public int size(): Returns the number of items in the Deque.
-
-public void printDeque(): Prints the items in the Deque from first to last, separated by a space.
-
-# public Item removeFirst(): Removes and returns the item at the front of the Deque. If no such item exists, returns null.
-
-$# public Item removeLast(): Removes and returns the item at the back of the Deque. If no such item exists, returns null.
-
-# public Item get(int index): Gets the item at the given index, where 0 is the front, 1 is the next item, and so forth.
-If no such item exists, returns null. Must not alter the deque!
-
-  */
